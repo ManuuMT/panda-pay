@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from 'framer-motion';
 
-export default function Hero() {
+export function Hero() {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
