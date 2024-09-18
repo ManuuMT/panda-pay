@@ -35,7 +35,50 @@ const altform = localFont({
       style: 'italic',
     },
   ],
+  variable: "--font-altform",
 })
+
+const editorial = localFont({
+  src: [
+    {
+      path: '../assets/fonts/editorial/EditorialNew-Ultralight.otf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/editorial/EditorialNew-UltralightItalic.otf',
+      weight: '200',
+      style: 'italic',
+    },
+    {
+      path: '../assets/fonts/editorial/EditorialNew-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/editorial/EditorialNew-Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../assets/fonts/editorial/EditorialNew-Ultrabold.otf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../assets/fonts/editorial/EditorialNew-UltraboldItalic.otf',
+      weight: '800',
+      style: 'italic',
+    },
+  ],
+  variable: "--font-editorial",
+})
+
+// const capriola = Capriola({
+//   subsets: ["latin"],
+//   weight: "400",
+//   variable: "--font-capriola",
+// });
 
 export const metadata: Metadata = {
   title: "Panda Pay",
@@ -50,7 +93,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={altform.className}
+        className={`${altform.variable} ${editorial.variable}`}
       >
         {children}
       </body>
