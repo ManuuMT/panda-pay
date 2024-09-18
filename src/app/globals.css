@@ -9,7 +9,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
+    --background: #fff;
     --foreground: #ededed;
   }
 }
@@ -19,6 +20,7 @@ body {
   background: var(--background);
   font-family: var(--font-editorial), Arial, Helvetica, sans-serif;
   margin-bottom: 100vh;
+  overflow-x: hidden;
 }
 
 .editorial {
@@ -32,5 +34,16 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

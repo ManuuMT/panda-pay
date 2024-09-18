@@ -1,6 +1,6 @@
 export function Navbar() {
     return (
-        <div className="altform fixed top-0 text-black w-full">
+        <div className="altform fixed top-0 z-10 text-black w-full">
             <div className="flex w-full">
                 <div className="flex w-3/4">
                     <div className="bg-black py-3 px-4 text-white flex justify-between w-2/5" style={{ borderRadius: "0 0 15px 0" }}>

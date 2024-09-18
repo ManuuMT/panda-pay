@@ -1,6 +1,6 @@
 'use client'
 
-import { Hero, Navbar } from "./components";
+import { BlackWhite, Hero, Navbar, OurSolutions } from "./components";
 import { useEffect } from "react";
 import Lenis from '@studio-freight/lenis'
 
@@ -20,6 +20,8 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <BlackWhite />
+      <OurSolutions />
     </>
   );
 }

@@ -30,7 +30,7 @@ export function Hero() {
                     <div className='w-3/4'>
                         <p>We’re in the payment solutions business – and in the “caring for our customers” business. For us, it’s not just about transactions, it’s about making life simpler for entrepreneurs, so we can help them succeed.</p>
                         <p className='mt-4'>With PandaPay, what you see is what you get. No surprises, no fuss, no hidden fees or hidden agenda. It’s all there in black & white.</p>
-                        <button className='bg-black rounded-3xl text-white px-5 py-2 text-xs font-light mt-10'>Our Solutions</button>
+                        <button className='bg-black rounded-3xl text-white px-6 py-3 text-xs font-light mt-10'>Our Solutions</button>
                     </div>
                 </div>
             </div>
