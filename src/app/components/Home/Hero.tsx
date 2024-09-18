@@ -1,18 +1,28 @@
-import React from 'react'
+'use client'
+
 import heroImg from "@/assets/images/hero.png"
 import Image from 'next/image'
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Hero() {
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start start', 'end end']
+    })
+    const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
     return (
-        <main className='bg-white text-black flex flex-col items-center'>
+        <main ref={container} className='bg-white text-black flex flex-col items-center'>
             <div className='mt-32 text-center'>
                 <h3 className='font-light text-5xl'>Hi! Our name is</h3>
                 <h1 className='altform font-bold text-[12rem]' style={{ lineHeight: "140px" }}>PandaPay</h1>
             </div>
-            <div className='w-full h-[75vh]'>
+            <motion.div className='w-full h-[75vh]' style={{ translateY: translate }}>
                 <Image className='w-full h-full object-contain' src={heroImg} alt='hero' />
-            </div>
-            <div className='flex altform px-16 text-3xl my-16'>
+            </motion.div>
+            <div className='flex altform px-16 text-3xl my-24'>
                 <div className='w-1/4'>
                     <p>Who we are</p>
                 </div>
